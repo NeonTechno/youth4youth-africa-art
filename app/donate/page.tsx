@@ -3,8 +3,8 @@ import Hero from "@/components/Hero";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Donate & Support | Youth4Youth Africa Art",
-  description: "Support African youth artists. Your donation helps provide materials, mentorship, platforms, and opportunities for young creatives.",
+  title: "Donate & Support | Youth4Youth Africa",
+  description: "Support African youth. Your donation helps provide resources, mentorship, platforms, and opportunities for young people.",
 };
 
 export default function Donate() {
@@ -82,7 +82,7 @@ export default function Donate() {
                   mentors, and platforms they need to thrive. Your donation bridges that gap.
                 </p>
                 <p>
-                  When you give to Youth4Youth Africa Art, you're not just funding programs—you're 
+                  When you give to Youth4Youth Africa, you're not just funding programs—you're 
                   investing in futures. You're saying yes to a young poet who needs a stage. Yes to 
                   a painter who needs brushes. Yes to a dancer who needs space. Yes to a digital 
                   artist who needs software.
@@ -172,6 +172,9 @@ export default function Donate() {
                 </h2>
                 <p className="text-lg text-neutralDark/80">
                   Your support makes our work possible
+                </p>
+                <p className="text-sm text-neutralDark/70 mt-4">
+                  Account Number: [To be provided by client]
                 </p>
               </div>
               <form className="space-y-6">

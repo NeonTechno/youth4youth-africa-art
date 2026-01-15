@@ -4,7 +4,7 @@ import EventCard from "@/components/EventCard";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Events & Workshops | Youth4Youth Africa Art",
+  title: "Events & Workshops | Youth4Youth Africa",
   description: "Join us for workshops, exhibitions, performances, and celebrations. Create, learn, and connect with African youth artists.",
 };
 

@@ -9,13 +9,13 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: "#A83926",      // Deep Sienna
-        accent: "#F1C232",       // Warm Amber
-        green: "#2E7D32",        // Forest Green
-        indigo: "#3F51B5",       // Indigo Blue
-        gold: "#FFC107",         // Mustard Gold
-        neutralLight: "#FAF3E0", // Ivory
-        neutralDark: "#333333",  // Charcoal
+        primary: "#FFC107",       // Yellow/Gold (from logo)
+        accent: "#FFC107",       // Yellow/Gold
+        green: "#FFC107",        // Yellow/Gold (replacing green)
+        indigo: "#FFC107",        // Yellow/Gold (replacing indigo)
+        gold: "#FFC107",         // Yellow/Gold
+        neutralLight: "#FFFFFF", // White
+        neutralDark: "#333333",  // Charcoal (for text)
       },
       fontFamily: {
         display: ['var(--font-display)', 'serif'],

@@ -3,8 +3,8 @@ import Hero from "@/components/Hero";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Mission & Vision | Youth4Youth Africa Art",
-  description: "Our mission is to empower African youth through art. Our vision is a continent where every young artist has a stage and art transforms communities.",
+  title: "Mission & Vision | Youth4Youth Africa",
+  description: "Our mission is to empower African youth. Our vision is a continent where every young person has a voice and youth transform communities.",
 };
 
 export default function MissionVision() {

@@ -4,8 +4,8 @@ import BlogPostPreview from "@/components/BlogPostPreview";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Stories & Blog | Youth4Youth Africa Art",
-  description: "Read stories of transformation, courage, and hope from African youth artists and our community.",
+  title: "Articles | Youth4Youth Africa",
+  description: "Read articles of transformation, courage, and hope from African youth and our community.",
 };
 
 export default function Blog() {
@@ -71,7 +71,7 @@ export default function Blog() {
   return (
     <>
       <Hero
-        title="Stories That Move"
+        title="ARTICLES"
         subtitle="Real stories of transformation, courage, and hope from our community"
       />
 
@@ -80,10 +80,10 @@ export default function Blog() {
         <div className="container-custom">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-4">
-              Latest Stories
+              Latest Articles
             </h2>
             <p className="text-lg text-neutralDark/70 max-w-2xl mx-auto">
-              Stories from our artists, our programs, and our communities
+              Articles from our youth, our programs, and our communities
             </p>
           </div>
           
@@ -117,7 +117,7 @@ export default function Blog() {
             </h2>
             <p className="text-lg text-neutralDark/80 mb-8 leading-relaxed">
               Have a story to tell? We're always looking for new voices to feature. Whether it's 
-              about your artistic journey, a community project, or how art has transformed your life—we want to hear it.
+              about your journey, a community project, or how you've transformed your life—we want to hear it.
             </p>
             <Link href="/contact" className="btn-primary">
               Submit Your Story

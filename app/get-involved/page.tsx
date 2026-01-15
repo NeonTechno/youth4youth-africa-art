@@ -3,7 +3,7 @@ import Hero from "@/components/Hero";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Get Involved | Youth4Youth Africa Art",
+  title: "Get Involved | Youth4Youth Africa",
   description: "Join us as a member, volunteer, or partner. Your talent, your power, our movement.",
 };
 
@@ -12,7 +12,7 @@ export default function GetInvolved() {
     <>
       <Hero
         title="Your Talent. Your Power. Our Movement."
-        subtitle="There are many ways to be part of Youth4Youth Africa Art"
+        subtitle="There are many ways to be part of Youth4Youth Africa"
       />
 
       {/* Join Us */}
@@ -99,9 +99,9 @@ export default function GetInvolved() {
                 </div>
               </div>
               <div className="text-center">
-                <Link href="/contact" className="btn-primary">
-                  Join Now
-                </Link>
+                <a href="https://forms.gle/example" target="_blank" rel="noopener noreferrer" className="btn-primary inline-block">
+                  Join Now (Google Form)
+                </a>
               </div>
             </div>
           </div>

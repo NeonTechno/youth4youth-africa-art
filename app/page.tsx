@@ -7,8 +7,8 @@ import BlogPostPreview from "@/components/BlogPostPreview";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Home | Youth4Youth Africa Art",
-  description: "Where African youth use art to change stories, build peace, reclaim identity, and transform communities.",
+  title: "Home | Youth4Youth Africa",
+  description: "By Youth, For Youth, For One Africa. Empowering African youth to change stories, build peace, reclaim identity, and transform communities.",
 };
 
 export default function Home() {
@@ -114,8 +114,8 @@ export default function Home() {
   return (
     <>
       <Hero
-        title="Art that Speaks. Youth that Leads."
-        subtitle="Where African youth use art to change stories, build peace, reclaim identity, and transform communities."
+        title="By Youth, For Youth, For One Africa"
+        subtitle="Where African youth change stories, build peace, reclaim identity, and transform communities."
         ctaText="Join Our Movement"
         ctaLink="/get-involved"
       />
@@ -125,12 +125,11 @@ export default function Home() {
         <div className="container-custom">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-6">
-              Welcome to Youth4Youth Africa Art
+              Welcome to Youth4Youth Africa
             </h2>
             <p className="text-lg md:text-xl text-neutralDark/80 leading-relaxed">
-              Here, art breathes freedom. Youth paint peace. Youth pen justice. Youth dance identity. 
-              Youth4Youth Africa Art is where young Africans reclaim stories, rewrite futures, and transform 
-              communities—through art. We believe that every brushstroke, every verse, every movement is a 
+              By Youth, For Youth, For One Africa. Youth4Youth Africa is where young Africans reclaim stories, rewrite futures, and transform 
+              communities. We believe that every voice, every story, every action is a 
               declaration: <strong className="text-primary">We are here. We matter. We create change.</strong>
             </p>
           </div>

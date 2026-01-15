@@ -4,7 +4,7 @@ import Link from "next/link";
 import GalleryContent from "@/components/GalleryContent";
 
 export const metadata: Metadata = {
-  title: "Gallery & Showcase | Youth4Youth Africa Art",
+  title: "Gallery & Showcase | Youth4Youth Africa",
   description: "Explore our collection of visual art, performance, digital art, and poetry created by African youth artists.",
 };
 

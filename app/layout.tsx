@@ -18,23 +18,23 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  title: "Youth4Youth Africa Art | Art that Speaks. Youth that Leads.",
-  description: "A youth-led African initiative using art for empowerment, storytelling, peacebuilding, cultural identity, and social change.",
-  keywords: "African youth, art, empowerment, peacebuilding, cultural identity, social change, youth voices, creative expression",
-  authors: [{ name: "Youth4Youth Africa Art" }],
+  title: "Youth4Youth Africa | By Youth, For Youth, For One Africa",
+  description: "A youth-led African initiative empowering youth through storytelling, peacebuilding, cultural identity, and social change.",
+  keywords: "African youth, empowerment, peacebuilding, cultural identity, social change, youth voices",
+  authors: [{ name: "Youth4Youth Africa" }],
   openGraph: {
-    title: "Youth4Youth Africa Art",
-    description: "Art that Speaks. Youth that Leads.",
+    title: "Youth4Youth Africa",
+    description: "By Youth, For Youth, For One Africa",
     type: "website",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Youth4Youth Africa Art",
-    description: "Art that Speaks. Youth that Leads.",
+    title: "Youth4Youth Africa",
+    description: "By Youth, For Youth, For One Africa",
   },
   viewport: "width=device-width, initial-scale=1",
-  themeColor: "#A83926",
+  themeColor: "#FFC107",
 };
 
 export default function RootLayout({

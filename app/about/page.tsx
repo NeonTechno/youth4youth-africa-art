@@ -4,8 +4,8 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "About Us | Youth4Youth Africa Art",
-  description: "Learn about Youth4Youth Africa Art—a youth-led nonprofit empowering African youth through art, creativity, and community engagement.",
+  title: "About Us | Youth4Youth Africa",
+  description: "Learn about Youth4Youth Africa—a youth-led nonprofit empowering African youth through storytelling, creativity, and community engagement.",
 };
 
 export default function About() {
@@ -56,22 +56,22 @@ export default function About() {
             </h2>
             <div className="prose prose-lg max-w-none text-neutralDark/80 space-y-6">
               <p className="text-lg leading-relaxed">
-                Youth4Youth Africa Art began with a simple belief: <strong className="text-primary">Africa's future is in the hands of its youth, and art is the language they know best.</strong>
+                Youth4Youth Africa began with a simple belief: <strong className="text-primary">Africa's future is in the hands of its youth, and their voices are the language of change.</strong>
               </p>
               <p>
-                Founded in 2020 by young artists who dared to share their truths, we are a youth-led nonprofit 
-                rooted in African soil, reaching across continents. We started as a small group of friends—painters, 
-                poets, dancers, digital artists—who refused to wait for permission to create change.
+                Founded in 2020 by young leaders who dared to share their truths, we are a youth-led nonprofit 
+                rooted in African soil, reaching across continents. We started as a small group of friends—storytellers, 
+                writers, activists, changemakers—who refused to wait for permission to create change.
               </p>
               <p>
-                What began as local workshops in Kampala has grown into a movement spanning East, West, and Southern 
+                What began as local initiatives in Kampala has grown into a movement spanning East, West, and Southern 
                 Africa. We've learned that when you give young people the tools, the platform, and the community, 
-                they don't just create art—they create transformation.
+                they don't just create content—they create transformation.
               </p>
               <p>
-                Today, Youth4Youth Africa Art is more than an organization. We're a family of creators, storytellers, 
-                and changemakers. We're the mural that speaks truth to power. The poem that heals. The dance that 
-                unites. The digital art that reimagines the future.
+                Today, Youth4Youth Africa is more than an organization. We're a family of creators, storytellers, 
+                and changemakers. We're the voices that speak truth to power. The stories that heal. The actions that 
+                unite. The vision that reimagines the future.
               </p>
             </div>
           </div>
@@ -103,7 +103,7 @@ export default function About() {
               <div className="border-l-4 border-green pl-6">
                 <h3 className="text-2xl font-display font-bold text-green mb-3">We Build Community</h3>
                 <p className="text-neutralDark/80 leading-relaxed">
-                  Art thrives in community. We create spaces—physical and digital—where young artists can connect, 
+                  Community is our foundation. We create spaces—physical and digital—where young people can connect, 
                   collaborate, and support each other. Together, we're stronger.
                 </p>
               </div>
@@ -117,8 +117,8 @@ export default function About() {
               <div className="border-l-4 border-gold pl-6">
                 <h3 className="text-2xl font-display font-bold text-gold mb-3">We Give Access</h3>
                 <p className="text-neutralDark/80 leading-relaxed">
-                  Materials. Mentors. Platforms. Stories. We believe that talent is everywhere, but opportunity 
-                  is not. We work to level the playing field, ensuring that every young artist has a chance to shine.
+                  Resources. Mentors. Platforms. Stories. We believe that talent is everywhere, but opportunity 
+                  is not. We work to level the playing field, ensuring that every young person has a chance to shine.
                 </p>
               </div>
             </div>
@@ -131,7 +131,7 @@ export default function About() {
         <div className="container-custom">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-4">
-              Youth Voices Leading
+              OUR TEAM
             </h2>
             <p className="text-lg text-neutralDark/70 max-w-2xl mx-auto">
               Meet some of the young leaders driving our movement forward
@@ -181,14 +181,14 @@ export default function About() {
           </div>
           <div className="max-w-3xl mx-auto text-center">
             <p className="text-lg text-neutralDark/80 mb-8">
-              But impact isn't just about numbers. It's about Aisha, whose murals sparked conversations about 
-              gender-based violence. It's about Emmanuel, whose poetry gave voice to his community's struggles. 
-              It's about Fatou, whose dance brought healing to a divided town. It's about every young artist 
-              who discovered their power through creativity.
+              But impact isn't just about numbers. It's about Aisha, whose stories sparked conversations about 
+              gender-based violence. It's about Emmanuel, whose words gave voice to his community's struggles. 
+              It's about Fatou, whose actions brought healing to a divided town. It's about every young person 
+              who discovered their power through their voice.
             </p>
             <p className="text-lg text-neutralDark/80">
               We're grateful to our partners—funders, communities, institutions, and individuals—who believe 
-              in the power of youth-led change. Together, we're building a future where art is recognized as 
+              in the power of youth-led change. Together, we're building a future where youth voices are recognized as 
               a force for transformation.
             </p>
           </div>
@@ -202,8 +202,8 @@ export default function About() {
             Be Part of Our Story
           </h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto text-neutralLight/95">
-            Whether you're an artist, a supporter, a partner, or someone who believes in the power of youth 
-            and art—there's a place for you here.
+            Whether you're a youth, a supporter, a partner, or someone who believes in the power of youth 
+            voices—there's a place for you here.
           </p>
           <Link href="/get-involved" className="btn-secondary">
             Get Involved

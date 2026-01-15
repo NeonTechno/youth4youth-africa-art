@@ -14,7 +14,9 @@ export default function Header() {
     { href: "/artists", label: "Artists & Voices" },
     { href: "/gallery", label: "Gallery" },
     { href: "/events", label: "Events" },
-    { href: "/blog", label: "Stories" },
+    { href: "/blog", label: "ARTICLES" },
+    { href: "/my-africa", label: "MY AFRICA" },
+    { href: "/sdgs", label: "STORIES FOR A BETTER WORLD (SDGs)" },
     { href: "/get-involved", label: "Get Involved" },
     { href: "/contact", label: "Contact" },
   ];
@@ -24,7 +26,7 @@ export default function Header() {
       <nav className="container-custom">
         <div className="flex items-center justify-between h-20">
           <Link href="/" className="text-2xl font-display font-bold text-accent hover:text-gold transition-colors">
-            Youth4Youth Africa Art
+            Youth4Youth Africa
           </Link>
 
           {/* Desktop Navigation */}

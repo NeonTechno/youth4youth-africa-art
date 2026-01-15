@@ -4,7 +4,7 @@ import ArtistCard from "@/components/ArtistCard";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Artists & Youth Voices | Youth4Youth Africa Art",
+  title: "Artists & Youth Voices | Youth4Youth Africa",
   description: "Meet the young African artists and voices shaping our movement. Discover their stories, their art, and their impact.",
 };
 

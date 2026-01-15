@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import Hero from "@/components/Hero";
 
 export const metadata: Metadata = {
-  title: "Contact Us | Youth4Youth Africa Art",
-  description: "Get in touch with Youth4Youth Africa Art. We'd love to hear from you—whether you're an artist, supporter, partner, or have questions.",
+  title: "Contact Us | Youth4Youth Africa",
+  description: "Get in touch with Youth4Youth Africa. We'd love to hear from you—whether you're a youth, supporter, partner, or have questions.",
 };
 
 export default function Contact() {
@@ -26,26 +26,32 @@ export default function Contact() {
               <div className="space-y-6">
                 <div>
                   <h3 className="text-xl font-semibold text-primary mb-2">Email</h3>
-                  <a href="mailto:info@youth4youthafricaart.org" className="text-neutralDark/80 hover:text-primary transition-colors">
-                    info@youth4youthafricaart.org
+                  <a href="mailto:info@youth4youthafrica.org" className="text-neutralDark/80 hover:text-primary transition-colors">
+                    info@youth4youthafrica.org
                   </a>
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-primary mb-2">General Inquiries</h3>
-                  <a href="mailto:hello@youth4youthafricaart.org" className="text-neutralDark/80 hover:text-primary transition-colors">
-                    hello@youth4youthafricaart.org
+                  <a href="mailto:hello@youth4youthafrica.org" className="text-neutralDark/80 hover:text-primary transition-colors">
+                    hello@youth4youthafrica.org
                   </a>
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-primary mb-2">Partnerships</h3>
-                  <a href="mailto:partnerships@youth4youthafricaart.org" className="text-neutralDark/80 hover:text-primary transition-colors">
-                    partnerships@youth4youthafricaart.org
+                  <a href="mailto:partnerships@youth4youthafrica.org" className="text-neutralDark/80 hover:text-primary transition-colors">
+                    partnerships@youth4youthafrica.org
                   </a>
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-primary mb-2">Media & Press</h3>
-                  <a href="mailto:media@youth4youthafricaart.org" className="text-neutralDark/80 hover:text-primary transition-colors">
-                    media@youth4youthafricaart.org
+                  <a href="mailto:media@youth4youthafrica.org" className="text-neutralDark/80 hover:text-primary transition-colors">
+                    media@youth4youthafrica.org
+                  </a>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-primary mb-2">WhatsApp</h3>
+                  <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" className="text-neutralDark/80 hover:text-primary transition-colors">
+                    Join our WhatsApp Channel
                   </a>
                 </div>
               </div>
@@ -134,7 +140,7 @@ export default function Contact() {
                   Send Message
                 </button>
                 <p className="text-xs text-neutralDark/60 text-center">
-                  We typically respond within 2-3 business days.
+                  We respond within 4–5 work days.
                 </p>
               </form>
             </div>

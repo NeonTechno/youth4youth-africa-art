@@ -4,8 +4,8 @@ import ProgramCard from "@/components/ProgramCard";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Programs & Initiatives | Youth4Youth Africa Art",
-  description: "Explore our programs: Creative Echoes, Voices Unchained, Canvas of Cultures, and Digital Generation—empowering African youth through art.",
+  title: "Programs & Initiatives | Youth4Youth Africa",
+  description: "Explore our programs empowering African youth through storytelling, mentorship, and community engagement.",
 };
 
 export default function Programs() {

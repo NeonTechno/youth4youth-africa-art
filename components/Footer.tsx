@@ -9,9 +9,9 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           {/* About */}
           <div>
-            <h3 className="text-xl font-display font-bold text-accent mb-4">Youth4Youth Africa Art</h3>
+            <h3 className="text-xl font-display font-bold text-accent mb-4">Youth4Youth Africa</h3>
             <p className="text-sm text-neutralLight/80">
-              Art that Speaks. Youth that Leads. Empowering African youth through creative expression.
+              By Youth, For Youth, For One Africa. Empowering African youth through storytelling and social change.
             </p>
           </div>
 
@@ -79,8 +79,13 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <a href="mailto:info@youth4youthafricaart.org" className="hover:text-accent transition-colors">
-                  info@youth4youthafricaart.org
+                <a href="mailto:info@youth4youthafrica.org" className="hover:text-accent transition-colors">
+                  info@youth4youthafrica.org
+                </a>
+              </li>
+              <li>
+                <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
+                  WhatsApp Channel
                 </a>
               </li>
               <li className="flex space-x-4 mt-4">
@@ -105,7 +110,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-neutralLight/20 pt-8 mt-8 text-center text-sm text-neutralLight/60">
-          <p>&copy; {currentYear} Youth4Youth Africa Art. All rights reserved.</p>
+          <p>&copy; {currentYear} Youth4Youth Africa. All rights reserved.</p>
           <p className="mt-2">
             Built with passion by African youth, for African youth.
           </p>
