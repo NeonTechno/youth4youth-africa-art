@@ -4,6 +4,7 @@ import ProgramCard from "@/components/ProgramCard";
 import ArtistCard from "@/components/ArtistCard";
 import EventCard from "@/components/EventCard";
 import BlogPostPreview from "@/components/BlogPostPreview";
+import KenteDivider from "@/components/KenteDivider";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -121,29 +122,31 @@ export default function Home() {
       />
 
       {/* Intro Section */}
-      <section className="section-padding bg-neutralLight">
+      <section className="section-padding bg-white kente-pattern">
+        <KenteDivider />
         <div className="container-custom">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-6">
+          <div className="max-w-4xl mx-auto text-center animate-slide-up">
+            <h2 className="text-3xl md:text-5xl font-display font-bold text-gold mb-6">
               Welcome to Youth4Youth Africa
             </h2>
-            <p className="text-lg md:text-xl text-neutralDark/80 leading-relaxed">
+            <p className="text-lg md:text-xl text-black/80 leading-relaxed">
               By Youth, For Youth, For One Africa. Youth4Youth Africa is where young Africans reclaim stories, rewrite futures, and transform 
               communities. We believe that every voice, every story, every action is a 
-              declaration: <strong className="text-primary">We are here. We matter. We create change.</strong>
+              declaration: <strong className="text-red font-bold">We are here. We matter. We create change.</strong>
             </p>
           </div>
         </div>
       </section>
 
       {/* Program Highlights */}
-      <section className="section-padding bg-white">
+      <section className="section-padding bg-gradient-to-br from-white via-gold/5 to-green/5">
+        <KenteDivider />
         <div className="container-custom">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-4">
+          <div className="text-center mb-12 animate-slide-up">
+            <h2 className="text-3xl md:text-5xl font-display font-bold text-black mb-4">
               Our Programs
             </h2>
-            <p className="text-lg text-neutralDark/70 max-w-2xl mx-auto">
+            <p className="text-lg text-black/70 max-w-2xl mx-auto font-medium">
               Four pillars of empowerment, four pathways to change
             </p>
           </div>
@@ -161,13 +164,14 @@ export default function Home() {
       </section>
 
       {/* Artist Spotlight */}
-      <section className="section-padding bg-neutralLight">
+      <section className="section-padding bg-white">
+        <KenteDivider />
         <div className="container-custom">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-4">
+          <div className="text-center mb-12 animate-slide-up">
+            <h2 className="text-3xl md:text-5xl font-display font-bold text-black mb-4">
               Artist Spotlight
             </h2>
-            <p className="text-lg text-neutralDark/70 max-w-2xl mx-auto">
+            <p className="text-lg text-black/70 max-w-2xl mx-auto font-medium">
               Meet the young voices shaping Africa's creative future
             </p>
           </div>
@@ -185,13 +189,14 @@ export default function Home() {
       </section>
 
       {/* Upcoming Events */}
-      <section className="section-padding bg-white">
+      <section className="section-padding bg-gradient-to-br from-red/5 via-gold/5 to-blue/5">
+        <KenteDivider />
         <div className="container-custom">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-4">
+          <div className="text-center mb-12 animate-slide-up">
+            <h2 className="text-3xl md:text-5xl font-display font-bold text-black mb-4">
               Upcoming Events
             </h2>
-            <p className="text-lg text-neutralDark/70 max-w-2xl mx-auto">
+            <p className="text-lg text-black/70 max-w-2xl mx-auto font-medium">
               Join us for workshops, exhibitions, and celebrations
             </p>
           </div>
@@ -233,20 +238,22 @@ export default function Home() {
       </section>
 
       {/* Call to Action - Donate */}
-      <section className="section-padding bg-gradient-to-br from-primary via-indigo to-green text-neutralLight">
-        <div className="container-custom text-center">
-          <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">
+      <section className="section-padding bg-kente-gradient text-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="absolute inset-0 kente-pattern opacity-20"></div>
+        <div className="container-custom text-center relative z-10 animate-fade-in">
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-display font-bold mb-6 drop-shadow-lg">
             Support a Young Voice. Fuel a Dream.
           </h2>
-          <p className="text-xl mb-8 max-w-3xl mx-auto text-neutralLight/95">
+          <p className="text-lg md:text-xl lg:text-2xl mb-10 max-w-3xl mx-auto text-white/95 drop-shadow-md font-medium">
             Your gift helps youth tell their stories, preserve culture, build peace, and create change. 
             Every contribution—no matter the size—amplifies a voice that deserves to be heard.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/donate" className="btn-secondary">
+            <Link href="/donate" className="btn-primary bg-gold text-black hover:bg-gold/90 shadow-2xl">
               Donate Now
             </Link>
-            <Link href="/get-involved" className="btn-outline border-neutralLight text-neutralLight hover:bg-neutralLight hover:text-primary">
+            <Link href="/get-involved" className="btn-outline border-2 border-white text-white hover:bg-white hover:text-black shadow-xl">
               Get Involved
             </Link>
           </div>

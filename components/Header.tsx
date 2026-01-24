@@ -22,27 +22,31 @@ export default function Header() {
   ];
 
   return (
-    <header className="bg-neutralDark text-neutralLight sticky top-0 z-50 shadow-lg">
+    <header className="bg-white text-black sticky top-0 z-50 shadow-md border-b border-gold/20">
       <nav className="container-custom">
         <div className="flex items-center justify-between h-20">
-          <Link href="/" className="text-2xl font-display font-bold text-accent hover:text-gold transition-colors">
+          <Link 
+            href="/" 
+            className="text-2xl md:text-3xl font-display font-bold text-gold hover:text-red transition-all duration-300 hover:scale-105 transform"
+          >
             Youth4Youth Africa
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-6">
+          <div className="hidden lg:flex items-center space-x-8">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="hover:text-accent transition-colors font-medium"
+                className="text-base font-semibold text-black hover:text-gold transition-all duration-300 relative group"
               >
                 {link.label}
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gold group-hover:w-full transition-all duration-300"></span>
               </Link>
             ))}
             <Link
               href="/donate"
-              className="btn-secondary ml-4"
+              className="btn-primary ml-4 text-sm"
             >
               Donate
             </Link>
@@ -50,17 +54,17 @@ export default function Header() {
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden p-2"
+            className="lg:hidden p-2 text-black hover:text-gold transition-colors"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
             aria-expanded={isMenuOpen}
           >
             <svg
-              className="w-6 h-6"
+              className="w-7 h-7"
               fill="none"
               strokeLinecap="round"
               strokeLinejoin="round"
-              strokeWidth="2"
+              strokeWidth="2.5"
               viewBox="0 0 24 24"
               stroke="currentColor"
             >
@@ -75,13 +79,13 @@ export default function Header() {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="lg:hidden py-4 border-t border-neutralLight/20">
-            <div className="flex flex-col space-y-4">
+          <div className="lg:hidden py-6 border-t-2 border-gold/30 bg-white">
+            <div className="flex flex-col space-y-5">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="hover:text-accent transition-colors font-medium"
+                  className="text-lg font-semibold text-black hover:text-gold transition-all duration-300 py-2 border-b border-gold/10 hover:border-gold hover:pl-2 transform"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {link.label}
@@ -89,7 +93,7 @@ export default function Header() {
               ))}
               <Link
                 href="/donate"
-                className="btn-secondary mt-4"
+                className="btn-primary mt-6 text-center w-full"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Donate

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Cormorant_Garamond } from "next/font/google";
+import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -10,8 +10,8 @@ const inter = Inter({
   display: "swap",
 });
 
-const cormorant = Cormorant_Garamond({ 
-  weight: ["400", "600", "700"],
+const poppins = Poppins({ 
+  weight: ["400", "500", "600", "700", "800"],
   subsets: ["latin"],
   variable: "--font-display",
   display: "swap",
@@ -43,7 +43,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${cormorant.variable}`}>
+    <html lang="en" className={`${inter.variable} ${poppins.variable}`}>
       <body className="min-h-screen flex flex-col">
         <Header />
         <main className="flex-grow">{children}</main>
