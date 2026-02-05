@@ -22,12 +22,12 @@ export default function Header() {
   ];
 
   return (
-    <header className="bg-white text-black sticky top-0 z-50 shadow-md border-b border-gold/20">
+    <header className="bg-white text-black sticky top-0 z-50 shadow-md border-b border-yellow/20">
       <nav className="container-custom">
         <div className="flex items-center justify-between h-20">
           <Link 
             href="/" 
-            className="text-2xl md:text-3xl font-display font-bold text-gold hover:text-red transition-all duration-300 hover:scale-105 transform"
+            className="text-2xl md:text-3xl font-display font-bold text-yellow hover:text-darkGrey transition-all duration-300 hover:scale-105 transform"
           >
             Youth4Youth Africa
           </Link>
@@ -38,10 +38,10 @@ export default function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-base font-semibold text-black hover:text-gold transition-all duration-300 relative group"
+                className="text-base font-semibold text-black hover:text-yellow transition-all duration-300 relative group"
               >
                 {link.label}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gold group-hover:w-full transition-all duration-300"></span>
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-yellow group-hover:w-full transition-all duration-300"></span>
               </Link>
             ))}
             <Link
@@ -54,7 +54,7 @@ export default function Header() {
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden p-2 text-black hover:text-gold transition-colors"
+            className="lg:hidden p-2 text-black hover:text-yellow transition-colors"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
             aria-expanded={isMenuOpen}
@@ -79,13 +79,13 @@ export default function Header() {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="lg:hidden py-6 border-t-2 border-gold/30 bg-white">
+          <div className="lg:hidden py-6 border-t-2 border-yellow/30 bg-white">
             <div className="flex flex-col space-y-5">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-lg font-semibold text-black hover:text-gold transition-all duration-300 py-2 border-b border-gold/10 hover:border-gold hover:pl-2 transform"
+                  className="text-lg font-semibold text-black hover:text-yellow transition-all duration-300 py-2 border-b border-yellow/10 hover:border-yellow hover:pl-2 transform"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {link.label}

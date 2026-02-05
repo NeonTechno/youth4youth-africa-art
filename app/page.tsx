@@ -1,265 +1,230 @@
 import type { Metadata } from "next";
 import Hero from "@/components/Hero";
-import ProgramCard from "@/components/ProgramCard";
-import ArtistCard from "@/components/ArtistCard";
-import EventCard from "@/components/EventCard";
-import BlogPostPreview from "@/components/BlogPostPreview";
-import KenteDivider from "@/components/KenteDivider";
 import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Home | Youth4Youth Africa",
-  description: "By Youth, For Youth, For One Africa. Empowering African youth to change stories, build peace, reclaim identity, and transform communities.",
+  description: "By Youth, For Youth, For One Africa. A youth network uniting Africa's young people and empowering them through advocacy, education, and opportunities to drive change across the continent.",
 };
 
 export default function Home() {
   const programs = [
     {
-      name: "Creative Echoes",
-      description: "Mentorship and exhibitions across all art forms. We connect emerging artists with established mentors, providing platforms for their voices to be heard.",
-      link: "/programs#creative-echoes",
-      icon: "🎨",
+      name: "Education Access & Innovation",
+      description: "Bridging opportunity gaps through innovative educational programs and digital learning solutions.",
+      programs: ["Class2Go", "Unfold Africa"],
+      icon: "📚",
     },
     {
-      name: "Voices Unchained",
-      description: "Spoken word and poetry training programs that empower youth to tell their stories, confront injustice, and celebrate their heritage through words.",
-      link: "/programs#voices-unchained",
-      icon: "📝",
+      name: "Climate Action & Environmental Education",
+      description: "Empowering youth to lead climate action and environmental stewardship in their communities.",
+      programs: ["Little Green Voices", "The Almajiri Climate Story"],
+      icon: "🌱",
     },
     {
-      name: "Canvas of Cultures",
-      description: "Projects that revive heritage and tradition through visual arts. We explore how traditional techniques meet contemporary expression.",
-      link: "/programs#canvas-of-cultures",
-      icon: "🖼️",
+      name: "Gender Equality & Women's Empowerment",
+      description: "Advocating for gender equality and creating opportunities for women and girls across Africa.",
+      programs: ["Below Her Tray", "Café Féministe"],
+      icon: "⚖️",
     },
     {
-      name: "Digital Generation",
-      description: "Digital art, design, and performance tools that uplift. We equip youth with skills for the digital age while preserving cultural narratives.",
-      link: "/programs#digital-generation",
-      icon: "💻",
-    },
-  ];
-
-  const featuredArtists = [
-    {
-      name: "Aisha Mwangi",
-      location: "Nairobi, Kenya",
-      artform: "Graffiti & Mural Art",
-      quote: "My graffiti murals turned vacant walls into powerful calls against gender-based violence. Art speaks when words fail.",
-      image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=400&h=400&fit=crop",
-    },
-    {
-      name: "Emmanuel Okonkwo",
-      location: "Lagos, Nigeria",
-      artform: "Spoken Word Poetry",
-      quote: "When I perform, I'm not just reciting words—I'm channeling the voices of my ancestors and the dreams of my generation.",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
-    },
-    {
-      name: "Fatou Diallo",
-      location: "Dakar, Senegal",
-      artform: "Traditional & Contemporary Dance",
-      quote: "Dance is my language. Through movement, I tell stories of resistance, joy, and the unbreakable spirit of African women.",
-      image: "https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=400&h=400&fit=crop",
+      name: "Peacebuilding & Youth Leadership",
+      description: "Building peace through youth leadership, dialogue, and community engagement initiatives.",
+      programs: ["Youth Leadership Programs", "Peacebuilding Workshops"],
+      icon: "🤝",
     },
   ];
 
-  const upcomingEvents = [
+  const publications = [
     {
-      title: "Summer Peace Jam",
-      date: "July 10, 2025",
-      location: "Lagos, Nigeria",
-      description: "A day of music, poetry, and visual art celebrating peace and unity across African communities.",
-      link: "/events/summer-peace-jam",
-      type: "upcoming" as const,
+      title: "Weekly Articles",
+      subtitle: "Voices for Change",
+      description: "Regular thought leadership articles and insights from youth advocates across the continent.",
+      link: "/blog",
     },
     {
-      title: "Culture Walk",
-      date: "August 22, 2025",
-      location: "Accra, Ghana",
-      description: "An immersive journey through African heritage, featuring traditional crafts, contemporary art, and live performances.",
-      link: "/events/culture-walk",
-      type: "upcoming" as const,
+      title: "Stories for a Better World",
+      subtitle: "SDGs Series",
+      description: "Inspiring stories aligned with the United Nations Sustainable Development Goals.",
+      example: "Tari and the Market Full of Hope (SDG 1)",
+      link: "/sdgs",
     },
     {
-      title: "Digital Arts Lab",
-      date: "September 5, 2025",
-      location: "Online",
-      description: "Virtual workshop series on digital storytelling, graphic design, and multimedia art creation.",
-      link: "/events/digital-arts-lab",
-      type: "upcoming" as const,
-    },
-  ];
-
-  const latestStories = [
-    {
-      title: "How Dance Helped Heal Our Town",
-      excerpt: "In a small community torn by conflict, young dancers found a way to bridge divides and create spaces for dialogue and healing.",
-      author: "Sarah Kariuki",
-      date: "May 15, 2025",
-      category: "Social Justice",
-      image: "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=600&h=400&fit=crop",
-      slug: "dance-healed-our-town",
-    },
-    {
-      title: "When Clay Teaches Culture: Crafting Identity Through Pottery",
-      excerpt: "Traditional pottery workshops are more than art classes—they're lessons in history, identity, and the power of hands that shape both clay and futures.",
-      author: "Kwame Asante",
-      date: "May 8, 2025",
-      category: "Cultural Identity",
-      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&h=400&fit=crop",
-      slug: "clay-teaches-culture",
+      title: "MY AFRICA Series",
+      subtitle: "Reclaiming our past to redefine our future",
+      description: "A powerful series exploring African identity, history, and the future we're building together.",
+      link: "/my-africa",
     },
   ];
 
   return (
     <>
+      {/* Hero Section */}
       <Hero
-        title="By Youth, For Youth, For One Africa"
-        subtitle="Where African youth change stories, build peace, reclaim identity, and transform communities."
-        ctaText="Join Our Movement"
+        title="Youth4Youth Africa"
+        subtitle="By Youth, For Youth, For One Africa"
+        ctaText="Join the Network"
         ctaLink="/get-involved"
+        showStats={true}
       />
 
-      {/* Intro Section */}
-      <section className="section-padding bg-white kente-pattern">
-        <KenteDivider />
+      {/* Mission & Vision Snapshot */}
+      <section className="section-padding bg-white">
         <div className="container-custom">
-          <div className="max-w-4xl mx-auto text-center animate-slide-up">
-            <h2 className="text-3xl md:text-5xl font-display font-bold text-gold mb-6">
-              Welcome to Youth4Youth Africa
-            </h2>
-            <p className="text-lg md:text-xl text-black/80 leading-relaxed">
-              By Youth, For Youth, For One Africa. Youth4Youth Africa is where young Africans reclaim stories, rewrite futures, and transform 
-              communities. We believe that every voice, every story, every action is a 
-              declaration: <strong className="text-red font-bold">We are here. We matter. We create change.</strong>
-            </p>
+          <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+            <div className="bg-yellow/10 rounded-lg p-8 border-l-4 border-yellow">
+              <h2 className="text-2xl md:text-3xl font-display font-bold text-black mb-4">
+                Our Mission
+              </h2>
+              <p className="text-lg text-darkGrey leading-relaxed">
+                To bridge opportunity gaps through education, climate action, advocacy, and innovation led by young people.
+              </p>
+            </div>
+            <div className="bg-darkGrey/5 rounded-lg p-8 border-l-4 border-darkGrey">
+              <h2 className="text-2xl md:text-3xl font-display font-bold text-black mb-4">
+                Our Vision
+              </h2>
+              <p className="text-lg text-darkGrey leading-relaxed">
+                An Africa where young people are recognized as decision-makers of today, not just leaders of tomorrow.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Program Highlights */}
-      <section className="section-padding bg-gradient-to-br from-white via-gold/5 to-green/5">
-        <KenteDivider />
+      {/* What We Do - Programs & Pillars */}
+      <section className="section-padding bg-white">
         <div className="container-custom">
-          <div className="text-center mb-12 animate-slide-up">
-            <h2 className="text-3xl md:text-5xl font-display font-bold text-black mb-4">
-              Our Programs
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-black mb-4">
+              What We Do
             </h2>
-            <p className="text-lg text-black/70 max-w-2xl mx-auto font-medium">
-              Four pillars of empowerment, four pathways to change
+            <p className="text-lg text-darkGrey/70 max-w-2xl mx-auto">
+              Four pillars of empowerment driving change across Africa
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {programs.map((program) => (
-              <ProgramCard key={program.name} {...program} />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            {programs.map((program, index) => (
+              <div
+                key={index}
+                className="bg-white border-2 border-darkGrey/10 rounded-lg p-8 hover:border-yellow transition-all duration-300 hover:shadow-lg"
+              >
+                <div className="flex items-start mb-4">
+                  <div className="text-4xl mr-4">{program.icon}</div>
+                  <div className="flex-1">
+                    <h3 className="text-xl md:text-2xl font-display font-bold text-black mb-3">
+                      {program.name}
+                    </h3>
+                    <p className="text-darkGrey/80 leading-relaxed mb-4">
+                      {program.description}
+                    </p>
+                    <div className="border-t border-darkGrey/10 pt-4">
+                      <p className="text-sm font-semibold text-darkGrey mb-2">Programs:</p>
+                      <ul className="space-y-1">
+                        {program.programs.map((prog, idx) => (
+                          <li key={idx} className="text-darkGrey/70 flex items-center">
+                            <span className="text-yellow mr-2">•</span>
+                            {prog}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
             ))}
           </div>
           <div className="text-center mt-12">
-            <Link href="/programs" className="btn-outline">
+            <Link href="/programs" className="btn-outline border-2 border-yellow text-yellow hover:bg-yellow hover:text-black">
               Explore All Programs
             </Link>
           </div>
         </div>
       </section>
 
-      {/* Artist Spotlight */}
-      <section className="section-padding bg-white">
-        <KenteDivider />
-        <div className="container-custom">
-          <div className="text-center mb-12 animate-slide-up">
-            <h2 className="text-3xl md:text-5xl font-display font-bold text-black mb-4">
-              Artist Spotlight
-            </h2>
-            <p className="text-lg text-black/70 max-w-2xl mx-auto font-medium">
-              Meet the young voices shaping Africa's creative future
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {featuredArtists.map((artist) => (
-              <ArtistCard key={artist.name} {...artist} />
-            ))}
-          </div>
-          <div className="text-center mt-12">
-            <Link href="/artists" className="btn-outline">
-              Discover More Artists
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Upcoming Events */}
-      <section className="section-padding bg-gradient-to-br from-red/5 via-gold/5 to-blue/5">
-        <KenteDivider />
-        <div className="container-custom">
-          <div className="text-center mb-12 animate-slide-up">
-            <h2 className="text-3xl md:text-5xl font-display font-bold text-black mb-4">
-              Upcoming Events
-            </h2>
-            <p className="text-lg text-black/70 max-w-2xl mx-auto font-medium">
-              Join us for workshops, exhibitions, and celebrations
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {upcomingEvents.map((event) => (
-              <EventCard key={event.title} {...event} />
-            ))}
-          </div>
-          <div className="text-center mt-12">
-            <Link href="/events" className="btn-outline">
-              View All Events
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Latest Stories */}
-      <section className="section-padding bg-neutralLight">
+      {/* Publications & Thought Leadership */}
+      <section className="section-padding bg-darkGrey/5">
         <div className="container-custom">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-4">
-              Latest Stories
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-black mb-4">
+              Our Publications
             </h2>
-            <p className="text-lg text-neutralDark/70 max-w-2xl mx-auto">
-              Real stories of transformation, courage, and hope
+            <p className="text-lg text-darkGrey/70 max-w-2xl mx-auto font-medium">
+              Storytelling for Change
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {latestStories.map((story) => (
-              <BlogPostPreview key={story.slug} {...story} />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {publications.map((pub, index) => (
+              <div
+                key={index}
+                className="bg-white rounded-lg p-8 border-2 border-darkGrey/10 hover:border-yellow transition-all duration-300 hover:shadow-lg"
+              >
+                <h3 className="text-xl md:text-2xl font-display font-bold text-black mb-2">
+                  {pub.title}
+                </h3>
+                {pub.subtitle && (
+                  <p className="text-yellow font-semibold mb-4">{pub.subtitle}</p>
+                )}
+                <p className="text-darkGrey/80 leading-relaxed mb-4">
+                  {pub.description}
+                </p>
+                {pub.example && (
+                  <p className="text-sm text-darkGrey/60 italic mb-4">
+                    Example: "{pub.example}"
+                  </p>
+                )}
+                <Link
+                  href={pub.link}
+                  className="text-yellow font-semibold hover:underline inline-flex items-center"
+                >
+                  Read More
+                  <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
+              </div>
             ))}
-          </div>
-          <div className="text-center mt-12">
-            <Link href="/blog" className="btn-outline">
-              Read More Stories
-            </Link>
           </div>
         </div>
       </section>
 
-      {/* Call to Action - Donate */}
-      <section className="section-padding bg-kente-gradient text-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div className="absolute inset-0 kente-pattern opacity-20"></div>
-        <div className="container-custom text-center relative z-10 animate-fade-in">
-          <h2 className="text-3xl md:text-5xl lg:text-6xl font-display font-bold mb-6 drop-shadow-lg">
-            Support a Young Voice. Fuel a Dream.
-          </h2>
-          <p className="text-lg md:text-xl lg:text-2xl mb-10 max-w-3xl mx-auto text-white/95 drop-shadow-md font-medium">
-            Your gift helps youth tell their stories, preserve culture, build peace, and create change. 
-            Every contribution—no matter the size—amplifies a voice that deserves to be heard.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/donate" className="btn-primary bg-gold text-black hover:bg-gold/90 shadow-2xl">
-              Donate Now
-            </Link>
-            <Link href="/get-involved" className="btn-outline border-2 border-white text-white hover:bg-white hover:text-black shadow-xl">
-              Get Involved
-            </Link>
+      {/* Philosophy & Approach */}
+      <section className="section-padding bg-yellow">
+        <div className="container-custom">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="bg-white rounded-lg p-8 md:p-12 shadow-xl">
+              <h2 className="text-2xl md:text-3xl font-display font-bold text-black mb-6">
+                Our Philosophy
+              </h2>
+              <blockquote className="text-lg md:text-xl text-darkGrey leading-relaxed italic">
+                "We don't believe in charity, we believe in capacity.
+                <br />
+                We don't wait for opportunities, we create them.
+                <br />
+                We don't speak for young people — we amplify their voices."
+              </blockquote>
+            </div>
           </div>
+        </div>
+      </section>
+
+      {/* Final CTA Section */}
+      <section className="section-padding bg-darkGrey text-white">
+        <div className="container-custom text-center">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-6">
+            We are a generation that believes Africa's time is now.
+          </h2>
+          <p className="text-xl md:text-2xl mb-10 text-white/90 max-w-3xl mx-auto">
+            Join us in building an Africa where young people lead change, create opportunities, and shape the future.
+          </p>
+          <Link
+            href="/get-involved"
+            className="btn-primary bg-yellow text-black hover:bg-yellowAlt text-lg md:text-xl px-10 py-5 inline-block"
+          >
+            Join the Network
+          </Link>
         </div>
       </section>
     </>
   );
 }
-

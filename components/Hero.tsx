@@ -1,65 +1,95 @@
 import Link from "next/link";
 
 interface HeroProps {
-  title: string;
+  title?: string;
   subtitle?: string;
   ctaText?: string;
   ctaLink?: string;
   backgroundImage?: string;
-  overlay?: boolean;
+  showStats?: boolean;
 }
 
 export default function Hero({ 
   title, 
   subtitle, 
   ctaText, 
-  ctaLink = "/", 
+  ctaLink = "/get-involved", 
   backgroundImage,
-  overlay = true 
+  showStats = true
 }: HeroProps) {
-  // Default to an African youth-focused hero image if none provided
-  const defaultImage = "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1920&h=1080&fit=crop&q=80";
-  const heroImage = backgroundImage || defaultImage;
+  // Use the provided background image or default
+  const heroImage = backgroundImage || "/hero-background.jpg";
+
+  const stats = [
+    { number: "35,000+", label: "People Reached" },
+    { number: "40+", label: "Schools" },
+    { number: "50+", label: "Communities" },
+    { number: "4", label: "Countries" },
+    { number: "100+", label: "Volunteers" },
+  ];
 
   return (
     <section 
-      className="relative w-full min-h-[70vh] md:min-h-[85vh] flex items-center justify-center text-center overflow-hidden"
+      className="relative w-full min-h-[85vh] md:min-h-[90vh] flex items-center justify-center text-center overflow-hidden"
     >
       {/* Background Image */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${heroImage})` }}
       >
-        {/* Warm, energetic gradient overlay - lighter and more vibrant */}
-        {overlay && (
-          <div className="absolute inset-0 bg-gradient-to-br from-gold/40 via-red/30 via-green/20 to-blue/30"></div>
-        )}
-        {/* Subtle pattern overlay for texture */}
-        <div className="absolute inset-0 kente-pattern opacity-30"></div>
+        {/* Professional overlay for readability */}
+        <div className="absolute inset-0 bg-black/50"></div>
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container-custom animate-fade-in px-4">
-        <h1 className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-display font-bold mb-6 text-white drop-shadow-2xl leading-tight">
-          {title}
-        </h1>
+      <div className="relative z-10 container-custom animate-fade-in px-4 py-16">
+        {/* Logo placeholder - will be replaced with actual logo */}
+        <div className="mb-8">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-yellow mb-4">
+            Youth4Youth Africa
+          </h1>
+        </div>
+        
+        {title && (
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6 text-white drop-shadow-2xl leading-tight">
+            {title}
+          </h2>
+        )}
+        
         {subtitle && (
-          <p className="text-lg md:text-xl lg:text-2xl xl:text-3xl max-w-4xl mx-auto mb-10 text-white/95 drop-shadow-lg font-medium leading-relaxed">
+          <p className="text-lg md:text-xl lg:text-2xl max-w-3xl mx-auto mb-10 text-white/95 drop-shadow-lg font-medium leading-relaxed">
             {subtitle}
           </p>
         )}
+        
         {ctaText && (
           <Link 
             href={ctaLink} 
-            className="btn-primary text-lg md:text-xl px-10 py-5 inline-block shadow-2xl hover:shadow-gold/50"
+            className="btn-primary text-lg md:text-xl px-10 py-5 inline-block shadow-2xl bg-yellow text-black hover:bg-yellowAlt transition-all"
           >
             {ctaText}
           </Link>
         )}
+
+        {/* Impact Statistics Bar */}
+        {showStats && (
+          <div className="mt-16 grid grid-cols-2 md:grid-cols-5 gap-6 max-w-6xl mx-auto">
+            {stats.map((stat, index) => (
+              <div key={index} className="bg-white/95 backdrop-blur-sm rounded-lg p-4 md:p-6 shadow-lg">
+                <div className="text-3xl md:text-4xl font-display font-bold text-yellow mb-2">
+                  {stat.number}
+                </div>
+                <div className="text-sm md:text-base text-darkGrey font-semibold">
+                  {stat.label}
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
       </div>
 
-      {/* Decorative bottom wave */}
-      <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white to-transparent"></div>
+      {/* Decorative bottom transition */}
+      <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-white to-transparent"></div>
     </section>
   );
 }

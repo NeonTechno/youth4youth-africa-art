@@ -41,15 +41,15 @@
 
 @layer components {
   .btn-primary {
-    @apply px-8 py-4 bg-gold text-black font-bold rounded-lg hover:bg-gold/90 hover:shadow-lg hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2 transform;
+    @apply px-8 py-4 bg-yellow text-black font-bold rounded-lg hover:bg-yellowAlt hover:shadow-lg hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-yellow focus:ring-offset-2 transform;
   }
 
   .btn-secondary {
-    @apply px-8 py-4 bg-gold text-black font-bold rounded-lg hover:bg-gold/90 hover:shadow-lg hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2 transform;
+    @apply px-8 py-4 bg-yellow text-black font-bold rounded-lg hover:bg-yellowAlt hover:shadow-lg hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-yellow focus:ring-offset-2 transform;
   }
 
   .btn-outline {
-    @apply px-8 py-4 border-2 border-gold text-gold font-bold rounded-lg hover:bg-gold hover:text-black hover:shadow-lg hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2 transform;
+    @apply px-8 py-4 border-2 border-yellow text-yellow font-bold rounded-lg hover:bg-yellow hover:text-black hover:shadow-lg hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-yellow focus:ring-offset-2 transform;
   }
 
   .btn-red {
@@ -65,28 +65,7 @@
   }
 
   .text-gradient {
-    @apply bg-gradient-to-r from-gold via-red to-green bg-clip-text text-transparent;
-  }
-
-  /* Kente-inspired pattern backgrounds */
-  .kente-pattern {
-    background-image: 
-      repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(244, 180, 0, 0.03) 10px, rgba(244, 180, 0, 0.03) 20px),
-      repeating-linear-gradient(-45deg, transparent, transparent 10px, rgba(158, 27, 50, 0.03) 10px, rgba(158, 27, 50, 0.03) 20px);
-  }
-
-  .kente-divider {
-    @apply relative py-8;
-  }
-
-  .kente-divider::before {
-    content: '';
-    @apply absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-gold via-red via-green to-blue;
-  }
-
-  .kente-divider::after {
-    content: '';
-    @apply absolute top-1 left-0 right-0 h-0.5 bg-gradient-to-r from-blue via-green via-red to-gold opacity-50;
+    @apply bg-gradient-to-r from-yellow to-yellowAlt bg-clip-text text-transparent;
   }
 }
 

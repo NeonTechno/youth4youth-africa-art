@@ -9,27 +9,26 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Kente-inspired palette
-        gold: "#F4B400",           // Gold / Mustard Yellow - highlights, buttons, CTAs
-        red: "#9E1B32",            // Deep Red - passion, art, movement
-        green: "#0B6E4F",          // Emerald Green - growth, youth, Africa
-        blue: "#1F3C88",           // Royal Blue - trust, future
-        black: "#111111",          // Black - grounding, elegance
-        white: "#FAFAFA",          // White / Off-white
+        // Primary brand colors
+        yellow: "#FFD700",         // Bold, hopeful yellow - CTAs, highlights
+        yellowAlt: "#FBCB0A",      // Alternative yellow tone
+        white: "#FFFFFF",          // Pure white - backgrounds
+        black: "#000000",          // Black - text, structure
+        darkGrey: "#2E2E2E",      // Dark grey - text, navigation
         
         // Semantic color mappings for backward compatibility
-        primary: "#F4B400",        // Gold for primary actions
-        accent: "#9E1B32",        // Red for accents
-        neutralLight: "#FAFAFA",  // Off-white backgrounds
-        neutralDark: "#111111",   // Black for text
+        gold: "#FFD700",           // Yellow for primary actions
+        primary: "#FFD700",        // Yellow for primary actions
+        accent: "#FFD700",         // Yellow for accents
+        neutralLight: "#FFFFFF",   // White backgrounds
+        neutralDark: "#2E2E2E",   // Dark grey for text
       },
       fontFamily: {
         display: ['var(--font-display)', 'Poppins', 'Montserrat', 'sans-serif'],
         body: ['var(--font-body)', 'Inter', 'Open Sans', 'sans-serif'],
       },
       backgroundImage: {
-        'kente-gradient': 'linear-gradient(135deg, #F4B400 0%, #9E1B32 25%, #0B6E4F 50%, #1F3C88 75%, #F4B400 100%)',
-        'kente-soft': 'linear-gradient(135deg, rgba(244, 180, 0, 0.1) 0%, rgba(158, 27, 50, 0.1) 25%, rgba(11, 110, 79, 0.1) 50%, rgba(31, 60, 136, 0.1) 75%, rgba(244, 180, 0, 0.1) 100%)',
+        'subtle-gradient': 'linear-gradient(135deg, rgba(255, 215, 0, 0.05) 0%, rgba(255, 255, 255, 1) 100%)',
       },
     },
   },
