@@ -61,8 +61,8 @@ export default function Home() {
     <>
       {/* Hero Section */}
       <Hero
-        title="Youth4Youth Africa"
-        subtitle="By Youth, For Youth, For One Africa"
+        title="By Youth, For Youth, For One Africa"
+        subtitle="A youth network uniting Africa's young people and empowering them through advocacy, education, and opportunities to drive change across the continent."
         ctaText="Join the Network"
         ctaLink="/get-involved"
         showStats={true}
@@ -83,7 +83,7 @@ export default function Home() {
             <div className="bg-darkGrey/5 rounded-lg p-8 border-l-4 border-darkGrey">
               <h2 className="text-2xl md:text-3xl font-display font-bold text-black mb-4">
                 Our Vision
-              </h2>
+            </h2>
               <p className="text-lg text-darkGrey leading-relaxed">
                 An Africa where young people are recognized as decision-makers of today, not just leaders of tomorrow.
               </p>
@@ -181,8 +181,8 @@ export default function Home() {
                   <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
-                </Link>
-              </div>
+            </Link>
+          </div>
             ))}
           </div>
         </div>
@@ -195,7 +195,7 @@ export default function Home() {
             <div className="bg-white rounded-lg p-8 md:p-12 shadow-xl">
               <h2 className="text-2xl md:text-3xl font-display font-bold text-black mb-6">
                 Our Philosophy
-              </h2>
+            </h2>
               <blockquote className="text-lg md:text-xl text-darkGrey leading-relaxed italic">
                 "We don't believe in charity, we believe in capacity.
                 <br />
@@ -203,7 +203,7 @@ export default function Home() {
                 <br />
                 We don't speak for young people — we amplify their voices."
               </blockquote>
-            </div>
+          </div>
           </div>
         </div>
       </section>
@@ -222,7 +222,7 @@ export default function Home() {
             className="btn-primary bg-yellow text-black hover:bg-yellowAlt text-lg md:text-xl px-10 py-5 inline-block"
           >
             Join the Network
-          </Link>
+            </Link>
         </div>
       </section>
     </>

@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import Image from "next/image";
+import Logo from "@/app/gallery/photo_2026-01-15 21.07.30.jpeg";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -27,9 +29,17 @@ export default function Header() {
         <div className="flex items-center justify-between h-20">
           <Link 
             href="/" 
-            className="text-2xl md:text-3xl font-display font-bold text-yellow hover:text-darkGrey transition-all duration-300 hover:scale-105 transform"
+            className="flex items-center gap-3 group"
           >
-            Youth4Youth Africa
+            <Image
+              src={Logo}
+              alt="Youth4Youth Africa logo"
+              className="h-10 w-auto md:h-12"
+              priority
+            />
+            <span className="text-2xl md:text-3xl font-display font-bold text-yellow group-hover:text-darkGrey transition-all duration-300">
+              Youth4Youth Africa
+            </span>
           </Link>
 
           {/* Desktop Navigation */}

@@ -1,11 +1,14 @@
 import Link from "next/link";
+import Image, { StaticImageData } from "next/image";
+import Logo from "@/app/gallery/photo_2026-01-15 21.07.30.jpeg";
+import HeroBackground from "@/app/gallery/photo_2026-02-05 02.54.00.jpeg";
 
 interface HeroProps {
   title?: string;
   subtitle?: string;
   ctaText?: string;
   ctaLink?: string;
-  backgroundImage?: string;
+  backgroundImage?: StaticImageData | string;
   showStats?: boolean;
 }
 
@@ -17,8 +20,7 @@ export default function Hero({
   backgroundImage,
   showStats = true
 }: HeroProps) {
-  // Use the provided background image or default
-  const heroImage = backgroundImage || "/hero-background.jpg";
+  const heroImage: StaticImageData | string = backgroundImage || HeroBackground;
 
   const stats = [
     { number: "35,000+", label: "People Reached" },
@@ -33,27 +35,35 @@ export default function Hero({
       className="relative w-full min-h-[85vh] md:min-h-[90vh] flex items-center justify-center text-center overflow-hidden"
     >
       {/* Background Image */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroImage})` }}
-      >
+      <div className="absolute inset-0">
+        <Image
+          src={heroImage}
+          alt="Youth engaging in advocacy and education activities"
+          fill
+          priority
+          className="object-cover"
+          sizes="100vw"
+        />
         {/* Professional overlay for readability */}
         <div className="absolute inset-0 bg-black/50"></div>
       </div>
 
       {/* Content */}
       <div className="relative z-10 container-custom animate-fade-in px-4 py-16">
-        {/* Logo placeholder - will be replaced with actual logo */}
-        <div className="mb-8">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-yellow mb-4">
-            Youth4Youth Africa
-          </h1>
+        {/* Logo */}
+        <div className="mb-8 flex justify-center">
+          <Image
+            src={Logo}
+            alt="Youth4Youth Africa logo"
+            className="h-20 w-auto md:h-24"
+            priority
+          />
         </div>
         
         {title && (
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6 text-white drop-shadow-2xl leading-tight">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6 text-white drop-shadow-2xl leading-tight">
             {title}
-          </h2>
+          </h1>
         )}
         
         {subtitle && (
